@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap collapse plugin</title>
+
+    <!-- Bootstrap -->
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="customStyles.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-7">
+                <div class="well">
+                    <button class="btn btn-primary" id="btnExpandAll">Expand All</button>
+                    <button class="btn btn-primary" id="btnCollapseAll">Collapse All</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-7">
+                <div id="accordian" class="panel-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#panelBodyOne" data-toggle="collapse" data-parent="#accordian">
+                                    <span class="glyphicon glyphicon-plus-sign"></span>
+                                    Asia
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="panelBodyOne" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Nepal</li>
+                                    <li>India</li>
+                                    <li>China</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#panelBodyTwo" data-toggle="collapse" data-parent="#accordian">
+                                    <span class="glyphicon glyphicon-plus-sign"></span>
+                                    North America
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="panelBodyTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Usa</li>
+                                    <li>Canada</li>
+                                    <li>Mexico</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#panelBodyThree" data-toggle="collapse" data-parent="#accordian">
+                                    <span class="glyphicon glyphicon-plus-sign"></span>
+                                    South America
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="panelBodyThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Argentina</li>
+                                    <li>Brazil</li>
+                                    <li>Uruguay</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+        <div class="row">
+            <div class="col-xs-7">
+                <div id="accordian2" class="panel-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#panelBodyOne2" data-toggle="collapse" data-parent="#accordian2">
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                    Ayesha Takia
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="panelBodyOne2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <img src="Images/ayesha1.jpg" class="img-responsive"/>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#panelBodyTwo2" data-toggle="collapse" data-parent="#accordian2">
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                    Hot Ayesha
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="panelBodyTwo2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <img src="Images/ayesha2.jpg" class="img-responsive" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="#panelBodyThree2" data-toggle="collapse" data-parent="#accordian2">
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                    Sexy ayesha
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="panelBodyThree2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                               <img src="Images/ayesha3.jpg" class="img-responsive" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.collapse').on('shown.bs.collapse', function () {
+                $(this).parent().find('.glyphicon-menu-down').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+
+            });
+            $('.collapse').on('hidden.bs.collapse', function () {
+                $(this).parent().find('.glyphicon-menu-up').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+
+            });
+            $('.collapse').on('shown.bs.collapse', function () {
+                $(this).parent().find('.glyphicon-plus-sign').removeClass('glyphicon-plus-sign').addClass('glyphicon-minus-sign');
+
+            });
+            $('.collapse').on('hidden.bs.collapse', function () {
+                $(this).parent().find('.glyphicon-minus-sign').removeClass('glyphicon-minus-sign').addClass('glyphicon-plus-sign');
+
+            });
+            $('#btnExpandAll').click(function () {
+                $('.panel-collapse.collapse').collapse('show');
+            });
+            $('#btnCollapseAll').click(function () {
+                $('.panel-collapse.collapse.in').collapse('hide');
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap tabs plugin</title>
+
+    <!-- Bootstrap -->
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="customStyles.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#homeTab" data-toggle="tab">Home</a>
+                    </li>
+                    <li>
+                        <a href="#contactTab" data-toggle="tab">Contact</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            Locations <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#nepalTab" data-toggle="tab">Nepal</a>
+                            </li>
+                            <li>
+                                <a href="#usaTab" data-toggle="tab">Usa</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="homeTab" class="tab-pane active">
+                        <h3>Home Page</h3>
+                        <p>Home page content</p>
+                    </div>
+                    <div id="contactTab" class="tab-pane">
+                        <h3>Contact Page</h3>
+                        <p>Contact page content</p>
+                    </div>
+                    <div id="nepalTab" class="tab-pane">
+                        <h3>Nepal Page</h3>
+                        <p>Nepal page content</p>
+                    </div>
+                    <div id="usaTab" class="tab-pane">
+                        <h3>Usa Page</h3>
+                        <p>Usa page content</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
